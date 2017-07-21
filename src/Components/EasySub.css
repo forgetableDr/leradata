@@ -1,0 +1,12 @@
+.easySub_button{
+  border: solid 1.5px #fff;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  transition: background-color .2s ease, color .2s ease
+
+}
+.easySub_button:hover {
+  background-color: #fff;
+  color: #000
+}

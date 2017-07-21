@@ -1,0 +1,10 @@
+.admin-page_controls{
+  margin-bottom: 50px;
+}
+.admin-page_editproject{
+  height: 100px;
+  background: red;
+}
+.admin-page{
+  max-width: 100%
+}

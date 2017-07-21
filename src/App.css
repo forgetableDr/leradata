@@ -1,0 +1,352 @@
+/*!! GLOBAL STYLES CSS FILE !!*/
+
+
+/* FONTS */
+
+@font-face {
+	font-family: 'UniSansThin';
+	src: url('https://forgetable.ru/files/leradata/fonts/uni/https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansThinCaps.eot');
+	src: url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansThinCaps.eot?#iefix') format('embedded-opentype'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansThinCaps.woff2') format('woff2'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansThinCaps.woff') format('woff'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansThinCaps.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UniSansHeavy';
+	src: url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansHeavyCaps.eot');
+	src: url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansHeavyCaps.eot?#iefix') format('embedded-opentype'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansHeavyCaps.woff2') format('woff2'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansHeavyCaps.woff') format('woff'),
+		url('https://forgetable.ru/files/leradata/fonts/uni/subset-UniSansHeavyCaps.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+/* FONTS END */
+
+
+
+
+
+html, body{
+  min-height: 110vh;
+  position: relative;
+	font-family: "Roboto", sans-serif;
+}
+.App{
+  position: relative;
+  overflow: hidden;
+}
+
+/* LINK STYLES */
+
+a {
+	color: #000;
+	transition: color .2s ease
+}
+a:hover{
+  color: #cc6600;
+}
+/* REACT PAGE TRANSITION */
+
+
+
+/* ???? */
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 50px 0 50px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  will-change: transform, opacity;
+  transition: opacity .3s ease, transform .3s ease;
+  background: rgba(255,255,255,.5)
+}
+.container-height{
+  min-height: calc(100vh - 75px);
+  padding: 0 50px 100px 50px;
+}
+
+
+.PageTransition-enter {
+  transition: none;
+  opacity: 0;
+  left: 50%;
+  transform: translate3d(0, 0, 0) translateX(5%);
+}
+
+.PageTransition-enter-active {
+  transition: opacity .03s ease, transform .1s ease;
+  transition-delay: 0;
+  position: relative;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  left: 0;
+}
+.PageTransition-leave {
+  transition: none;
+  position: absolute;
+  opacity: 1;
+  transform: translateX(-50%) translate3d(0, 0, 0);
+  left: 50%;
+  top: 295px;
+}
+
+.PageTransition-leave.PageTransition-leave-active {
+  transition: opacity .03s ease, transform .1s ease;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-55%) translate3d(0, 0, 0);
+}
+
+
+/* NOTE Navigation on pages styles */
+
+.page_nav_logo{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page_nav_inner{
+  margin-top: -25px;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+.page_nav_left, .page_nav_right{
+  width: 68px;
+  height: 68px;
+  background: #000;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-position: center;
+  background-size: 30px auto;
+  background-repeat: no-repeat;
+  background-image: url('https://forgetable.ru/files/leradata/img/arrow.png');
+  transition: background-color .15s ease;
+  cursor: pointer;
+}
+.page_nav_left:hover, .page_nav_right:hover{
+  background-color: #660033;
+}
+.page_nav_right{
+  transform: rotate(180deg);
+}
+.page_nav_stroke{
+  width: 100%;
+  height: 3px;
+  background: #000;
+}
+
+
+/*!! Cards styles !!*/
+
+.cards{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 605px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #000;
+}
+.cards a{
+  color: #fff;
+}
+.cards:hover a{
+  color: #fff;
+}
+.card{
+  position: block;
+  width: 290px;
+  height: 220px;
+  background: #444;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background-image: url('https://forgetable.ru/files/leradata/img/home/handshake.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 25px;
+  flex-shrink: 0;
+}
+.card *{
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.card::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #181818;
+  opacity: .9;
+  transition: opacity .3s ease, background-color .3s ease;
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #660033;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.card:hover::before{
+  opacity: 0;
+}
+.card:hover::after{
+  background: #330015;
+}
+.card-disabled::after{
+  background: rgba(200,0,0,.8)
+}
+.card-disabled:hover::after{
+  background: rgba(200,0,0,.8)
+}
+.card-controls{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(to bottom, #000, transparent);
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card_controls_item{
+  width: 40px;
+  height: 40px;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.4);
+  cursor: pointer;
+}
+.card_controls_item:hover{
+  background-color: rgba(255,255,255,.7);
+}
+.card_controls-done{
+  background-image: url('https://image.flaticon.com/icons/svg/128/128384.svg')
+}
+.card_controls-close{
+  background-image: url('https://image.flaticon.com/icons/svg/59/59836.svg');
+}
+.card_controls-edit{
+  background-image: url('https://image.flaticon.com/icons/svg/109/109705.svg')
+}
+.card_inner{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.card_heading{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-family: "UniSansHeavy", sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 0;
+  transform: translateY(-50%);
+  width: 100%;
+
+}
+.card_additional{
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity .3s ease, transform .3s ease;
+  box-sizing: border-box;
+  left: 0;
+}
+.card:hover .card_additional{
+  opacity: 1;
+  transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* NOTE footer styles */
+
+.lera_footer{
+  height: 160px;
+  background: #282828;
+  width: 100%;
+}
+
+
+
+.pagination{
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-left: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.pagination li {
+  border-radius: 1px;
+}
+.pagination li a {
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: all .2s ease;
+}
+.pagination li:hover a {
+  background: rgba(255, 153, 51, .3);
+  color: #000;
+}
+.pagination li.active {
+  background: #FF9933;
+  background: linear-gradient(30deg, #FF9933, #ff7610);
+}
+.pagination li.active a {
+  color: #fff;
+}
+.pagination li.disabled a {
+  background: #eee;
+}
+.pagination li.disabled:hover a{
+  background: #eee
+}
+.pagination li.disabled a {
+  cursor: not-allowed;
+}

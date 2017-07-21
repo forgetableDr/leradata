@@ -1,0 +1,31 @@
+.leradata_pagination_item{
+  width: 60.5px;
+  height: 50px;
+  border: solid 1px #000;
+  border-right: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  text-decoration: none !important;
+}
+.leradata_pagination_item:last-child{
+  border-right: solid 1px black;
+  border-radius: 0 3px 3px 0;
+}
+.leradata_pagination_item:hover{
+  background: #FF9933
+}
+.leradata_pagination_link{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.leradata_pagination_link:hover{
+  color: #000;
+}
+.leradata_pagination_item:first-child{
+  border-radius: 3px 0 0 3px;
+}

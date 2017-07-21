@@ -1,0 +1,84 @@
+.f_editor a{
+  color: #000 !important;
+}
+.f-editor_outer{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.f-editor{
+  width: 60%;
+  min-height: 500px;
+  border: solid 1px #282828;
+  box-sizing: border-box;
+  max-height: 450px;
+  overflow: auto;
+}
+.f-editor_article{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.f-elemeditor{
+  width: 40%;
+  min-height: 500px;
+  border: solid 1px #282828;
+  box-sizing: border-box;
+  position: relative;
+  max-height: 450px;
+  overflow: auto;
+}
+.f-elemeditor_form{
+  position: relative;
+}
+.f-buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  background: #f1f1f1;
+  border-bottom: solid 1px #000;
+  padding: 20px !important;
+  margin-bottom: 50px;
+}
+.f-button{
+  width: 32px;
+  height: 32px;
+  border: solid 1px #282838;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  transition: background-color .2s ease;
+}
+.f-button:hover{
+  background: rgba(200,180,220,1);
+  cursor: pointer;
+}
+.aaa{
+  background: red;
+}
+
+
+
+.f-editor br{
+  padding: 0 40px;
+  background: #ccc;
+  content: "";
+}
+.f-elemeditor textarea {
+  width: 100%;
+  resize: vertical;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px 40px 5px 5px;
+}
+.f-elemeditor_exit{
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
